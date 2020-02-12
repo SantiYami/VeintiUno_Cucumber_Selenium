@@ -1,6 +1,10 @@
-FROM openjdk:8-jdk-alpine
-RUN mkdir -p /usr/src/vetiuno
-COPY jar_path_left /usr/src/ventiuno
-WORKDIR /usr/src/gateway
-EXPOSE 5000
-CMD ["java","-jar","/usr/src/ventiuno/jar_name"]
+FROM iron/java:1.8
+
+ADD target/ventiuno-0.0.1-SNAPSHOT.jar \
+    /test/lib/
+
+ADD src/test/resources/* \
+    /test/features/
+
+ENTRYPOINT java -ea -cp "/test/lib/*" cucumber.api.cli.Main --glue StepDefinition /test/features/
+

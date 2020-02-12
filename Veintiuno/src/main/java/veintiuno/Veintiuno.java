@@ -38,10 +38,10 @@ public class Veintiuno {
             manoCasa.añadirCarta(baraja.obtenerCarta());
         }
 
-        InputStreamReader isr = new InputStreamReader(System.in);
+	InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
 
-        String teclado = "";
+        String teclado = "P";
         do {
             if (teclado.equalsIgnoreCase("O")) {
                 manoJugador.añadirCarta(baraja.obtenerCarta());
