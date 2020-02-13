@@ -7,7 +7,6 @@ Integrantes:
 <li>David Santiago Garces Benitez</li>
 </ol>
 </ol>
-<li>Compilar el proyecto mediante maven a partir del comando <b> sudo mvn clean dependency:copy-dependencies package </b>
 <li>Construir el contenedor en docker a partir del comando <b> sudo docker build -t 21 . </b>
-<li>Ejecutar el contenedor de la prueba a partir del comando <b> sudo docker run 21 </b>
+<li>(Opcional) Compilar el proyecto mediante maven a partir del comando (Opcional) <b> sudo mvn clean dependency:copy-dependencies package </b>
 <ol>
