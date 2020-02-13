@@ -8,5 +8,6 @@ Integrantes:
 </ol>
 </ol>
 <li>Construir el contenedor en docker a partir del comando <b> sudo docker build -t 21 . </b>
+<b> Dentro de la construcción se vera el resultado de las pruebas, en la sección test, al final.</b>
 <li>(Opcional) Compilar el proyecto mediante maven a partir del comando (Opcional) <b> sudo mvn clean dependency:copy-dependencies package </b>
 <ol>
