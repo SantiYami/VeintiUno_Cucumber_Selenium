@@ -1,14 +1,8 @@
-FROM iron/java:1.8
+FROM maven:3.6.0-jdk-11-slim
 
-ADD target/ventiuno-0.0.1-SNAPSHOT.jar \
-    target/dependency/* \
-    /test/lib/
+COPY src /home/ventiuno/src
+COPY pom.xml /home/ventiuno
 
-ADD src/test/resources/* \
-    features
+WORKDIR /home/ventiuno
 
-ADD src/test/java/ventiuno/ventiuno* \
-    steps
-
-ENTRYPOINT java -cp "/test/lib/*" cucumber.api.cli.Main --glue steps features
-
+RUN mvn test
